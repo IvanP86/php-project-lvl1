@@ -7,9 +7,11 @@ use function cli\prompt;
 
 function run()
 {
-    line("Hallo");
+    
     $endOfCicle = 0;
     line('Welcome to the Brain Game!');
+    line('Answer "yes" if the number is even, otherwise answer "no".');
+    line(" ");
     $name = prompt('May I have your name?');
     line("Hello, %s!", $name);
     $endOfCicle = 0;
