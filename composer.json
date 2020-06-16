@@ -1,13 +1,17 @@
 {
     "name": "ivan-p86/php-project-lvl1",
      "bin": [
-      "bin/brain-games"
+      "bin/brain-games",
+      "bin/brain-even"
     ],
     "scripts": {
     "phpcs": "phpcs"
     },
      "autoload": {
-        "files": ["src/cli.php"]
+        "files": [
+            "src/cli.php",
+            "src/game.php"
+        ]
     },
     "require": {
         "wp-cli/php-cli-tools": "^0.11.11"
