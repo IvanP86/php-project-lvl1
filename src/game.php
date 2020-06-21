@@ -35,7 +35,7 @@ function run()
             continue;
         } else {
             if (($answerStrLower == "no") && ($randomNumber % 2 ) !== 0) {
-                line("Correct");
+                line("Correct!");
                 $endOfCicle = $endOfCicle + 1;
                 continue;
             } else {
@@ -45,7 +45,7 @@ function run()
             }
         }
         if (($answerStrLower == "no") && ($randomNumber % 2 ) !== 0) {
-            line("Correct");
+            line("Correct!");
             $endOfCicle = $endOfCicle + 1;
             continue;
         } else {
