@@ -15,12 +15,12 @@ function run()
     $name = prompt('May I have your name?');
     line("Hello, %s!", $name);
     $endOfCicle = 0;
-    while ($endOfCicle<3) {
+    while ($endOfCicle < 3) {
         $randomNumber = rand(1, 100);
         line("Question: %d", $randomNumber);
         $answer = prompt('Your answer');
         $answerStrLower = mb_strtolower($answer);
-        if (($answerStrLower !=="yes") && ($answerStrLower !=="no")) {
+        if (($answerStrLower !== "yes") && ($answerStrLower !== "no")) {
             $endOfCicle = 0;
             if ($randomNumber % 2 == 0) {
                 line("'{$answer}' is wrong answer :(. Corrct answer was 'yes' \n Let's try again, %s ", $name);
@@ -29,7 +29,7 @@ function run()
             }
             continue;
         }
-        if ($answerStrLower=="yes" && ($randomNumber % 2) == 0) {
+        if ($answerStrLower == "yes" && ($randomNumber % 2) == 0) {
             line("Correct!");
             $endOfCicle = $endOfCicle + 1;
             continue;
