@@ -5,6 +5,15 @@ namespace BrainGames\Game;
 use function cli\line;
 use function cli\prompt;
 
+function wrongNumber($answer, $number, $name)
+{
+    if ($number % 2 == 0) {
+        line("'{$answer}' is wrong answer :(. Corrct answer was 'yes' \n Let's try again, %s ", $name);
+    } else {
+        line("'{$answer}' is wrong answer :(. Corrct answer was 'no' \n Let's try again, %s ", $name);
+    }
+}
+
 function run()
 {
     
@@ -22,11 +31,7 @@ function run()
         $answerStrLower = mb_strtolower($answer);
         if (($answerStrLower !== "yes") && ($answerStrLower !== "no")) {
             $endOfCicle = 0;
-            if ($randomNumber % 2 == 0) {
-                line("'{$answer}' is wrong answer :(. Corrct answer was 'yes' \n Let's try again, %s ", $name);
-            } else {
-                line("'{$answer}' is wrong answer :(. Corrct answer was 'no' \n Let's try again, %s ", $name);
-            }
+            wrongNumber($answer, $randomNumber, $name);
             continue;
         }
         if ($answerStrLower == "yes" && ($randomNumber % 2) == 0) {
@@ -39,19 +44,10 @@ function run()
                 $endOfCicle = $endOfCicle + 1;
                 continue;
             } else {
-                line("'{$answer}' is wrong answer :(. Corrct answer was 'yes' \n Let's try again, %s ", $name);
+                wrongNumber($answer, $randomNumber, $name);
                 $endOfCicle = 0;
                 continue;
             }
-        }
-        if (($answerStrLower == "no") && ($randomNumber % 2 ) !== 0) {
-            line("Correct!");
-            $endOfCicle = $endOfCicle + 1;
-            continue;
-        } else {
-            line("'{$answer}' is wrong answer :(. Corrct answer was 'yes' \n Let's try again, %s ", $name);
-            $endOfCicle = 0;
-            continue;
         }
     }
     line("Congratulations, %s!", $name);
