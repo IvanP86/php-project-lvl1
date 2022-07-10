@@ -1,3 +1,3 @@
 <a href="https://codeclimate.com/github/codeclimate/codeclimate/maintainability"><img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability" /></a>
 [![Github Actions Status](https://github.com/IvanP86/php-project-lvl1/workflows/myActions/badge.svg)](https://github.com/IvanP86/php-project-lvl1/actions)
-<script id="asciicast-LEKzYQfUSeWp86cQ0YAPcTuaG" src="https://asciinema.org/a/LEKzYQfUSeWp86cQ0YAPcTuaG.js" async></script>
+<a href="https://asciinema.org/a/LEKzYQfUSeWp86cQ0YAPcTuaG" target="_blank"><img src="https://asciinema.org/a/LEKzYQfUSeWp86cQ0YAPcTuaG.svg" /></a>
